@@ -1,0 +1,58 @@
+<xs:schema attributeFormDefault="unqualified"
+	elementFormDefault="qualified" targetNamespace="http://www.w3.org/TR/html4/"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Gun">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="guns" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:string" name="Model" />
+							<xs:element name="Handy">
+								<xs:simpleType>
+									<xs:restriction base="xs:byte">
+										<xs:minInclusive value="1" />
+										<xs:maxInclusive value="2" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Origin">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="RU" />
+										<xs:enumeration value="EU" />
+										<xs:enumeration value="UK" />
+										<xs:enumeration value="US" />
+										<xs:enumeration value="AFR" />
+										<xs:enumeration value="CH" />
+										<xs:enumeration value="JP" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="TTC">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:short" name="range" />
+										<xs:element type="xs:short" name="sighting_rang" />
+										<xs:element type="xs:boolean" name="collar" />
+										<xs:element type="xs:boolean" name="optic" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Material">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="stal" />
+										<xs:enumeration value="plastik" />
+										<xs:enumeration value="splav" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:byte" name="id" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

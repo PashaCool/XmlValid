@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Gun xmlns="http://www.w3.org/TR/html4/">
+	<guns id="1">
+		<Model>Pistolet</Model>
+		<Handy>1</Handy>
+		<Origin>RU</Origin>
+		<TTC>
+			<range>450</range>
+			<sighting_rang>190</sighting_rang>
+			<collar>true</collar>
+			<optic>false</optic>
+		</TTC>
+		<Material>stal</Material>
+	</guns>
+	<guns id="2">
+		<Model>Strike</Model>
+		<Handy>2</Handy>
+		<Origin>US</Origin>
+		<TTC>
+			<range>420</range>
+			<sighting_rang>250</sighting_rang>
+			<collar>true</collar>
+			<optic>true</optic>
+		</TTC>
+		<Material>splav</Material>
+	</guns>
+</Gun>
